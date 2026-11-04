@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>冯瑞 · 游戏动画作品集 2026.10</title>
+  <meta name="description" content="冯瑞 2026.10 游戏动画作品集 —— Jack_BanLi 角色动画短片。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="冯瑞 · 游戏动画作品集 2026.10" />
+  <meta property="og:description" content="Jack_BanLi —— 角色动画短片，扫码在线观看。" />
+  <meta property="og:image" content="cover.jpg" />
+  <meta name="theme-color" content="#101010" />
+  <link rel="icon" href="cover.jpg" />
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --panel: #161616;
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f4f1ea;
+      --muted: #9a958c;
+      --accent: #e3c9a1;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 600px at 70% -10%, rgba(227, 201, 161, 0.10), transparent 60%),
+        radial-gradient(900px 500px at 0% 100%, rgba(120, 140, 200, 0.06), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 56px) 0 40px;
+    }
+    header.top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .brand { font-weight: 700; letter-spacing: 0.12em; font-size: 15px; }
+    .brand span { color: var(--muted); font-weight: 400; margin-left: 10px; letter-spacing: 0.06em; }
+    .top .date { color: var(--muted); font-size: 13px; letter-spacing: 0.14em; font-variant-numeric: tabular-nums; }
+
+    .hero { padding: clamp(36px, 8vw, 96px) 0 clamp(22px, 4vw, 40px); }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; letter-spacing: 0.22em; color: var(--accent);
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+    .kicker::before { content: ""; width: 22px; height: 1px; background: var(--accent); }
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 9vw, 96px);
+      line-height: 0.98;
+      letter-spacing: 0.02em;
+      font-weight: 800;
+    }
+    h1 .thin { font-weight: 300; color: var(--muted); display: block; font-size: 0.42em; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .lede { margin: 20px 0 0; max-width: 62ch; color: var(--muted); font-size: clamp(14px, 2vw, 16px); }
+    .lede strong { color: var(--text); font-weight: 600; }
+
+    .player {
+      position: relative;
+      margin-top: clamp(20px, 4vw, 32px);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--line);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+    }
+    .player video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      object-fit: contain;
+      outline: none;
+    }
+    .meta-row {
+      display: flex; flex-wrap: wrap; gap: 8px 18px;
+      margin-top: 14px; color: var(--muted); font-size: 12.5px; letter-spacing: 0.06em;
+      font-variant-numeric: tabular-nums;
+    }
+    .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--muted); display: inline-block; vertical-align: middle; }
+
+    .share {
+      margin-top: clamp(36px, 7vw, 72px);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: clamp(22px, 4vw, 40px);
+      align-items: center;
+      padding: clamp(22px, 4vw, 34px);
+      background: linear-gradient(160deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .qr {
+      width: clamp(132px, 20vw, 176px);
+      aspect-ratio: 1;
+      padding: 10px;
+      background: #fff;
+      border-radius: 14px;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    .qr img { display: block; width: 100%; height: 100%; }
+    .share h2 { margin: 0 0 8px; font-size: clamp(18px, 3vw, 24px); font-weight: 700; letter-spacing: 0.02em; }
+    .share p { margin: 0; color: var(--muted); font-size: 14px; max-width: 52ch; }
+    .url-row { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .url {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      border-radius: 10px;
+      word-break: break-all;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      font: inherit;
+      font-size: 13px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover { background: var(--accent); color: #101010; }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .btn[data-copied="true"] { background: var(--accent); color: #101010; }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 640px) {
+      .share { grid-template-columns: 1fr; }
+      .qr { margin: 0 auto; }
+      .share-text { text-align: center; }
+      .share p { margin-inline: auto; }
+      .url-row { justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">冯瑞<span>FENG RUI</span></div>
+      <div class="date">2026.10</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="kicker">Game Animation Reel</div>
+        <h1>
+          <span class="thin">游戏动画作品集</span>
+          Jack_BanLi
+        </h1>
+        <p class="lede">
+          一段关于 <strong>Jack_BanLi</strong> 的角色动画短片 —— 从动作节奏到表演细节，
+          记录这一阶段对游戏动画的理解与尝试。
+        </p>
+
+        <div class="player">
+          <video
+            id="reel"
+            controls
+            playsinline
+            preload="metadata"
+            poster="cover.jpg"
+            crossorigin="anonymous"
+          >
+            <source src="video.mp4" type="video/mp4" />
+            你的浏览器不支持 HTML5 视频，<a href="video.mp4">点此下载观看</a>。
+          </video>
+        </div>
+        <div class="meta-row">
+          <span>Jack_BanLi</span><span class="dot"></span>
+          <span>01:16</span><span class="dot"></span>
+          <span>1280 × 720</span><span class="dot"></span>
+          <span>30 fps</span>
+        </div>
+      </section>
+
+      <section class="share" aria-labelledby="share-title">
+        <div class="qr"><img src="qr.png" alt="扫描二维码打开作品集网页" width="512" height="512" /></div>
+        <div class="share-text">
+          <h2 id="share-title">扫码在手机上观看</h2>
+          <p>用手机相机或微信扫描左侧二维码，即可打开本页面并直接播放视频。也可以把链接分享给任何人。</p>
+          <div class="url-row">
+            <span class="url" id="page-url">loading…</span>
+            <button class="btn" id="copy-btn" type="button">复制链接</button>
+            <a class="btn" href="video.mp4" download>下载视频</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 冯瑞 · 游戏动画作品集</span>
+      <span>Jack_BanLi</span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var url = window.location.href.split("#")[0];
+      var label = document.getElementById("page-url");
+      label.textContent = url;
+
+      var btn = document.getElementById("copy-btn");
+      btn.addEventListener("click", function () {
+        var done = function () {
+          btn.textContent = "已复制";
+          btn.setAttribute("data-copied", "true");
+          setTimeout(function () {
+            btn.textContent = "复制链接";
+            btn.removeAttribute("data-copied");
+          }, 1600);
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(url).then(done, fallback);
+        } else {
+          fallback();
+        }
+        function fallback() {
+          var t = document.createElement("textarea");
+          t.value = url;
+          t.setAttribute("readonly", "");
+          t.style.position = "fixed";
+          t.style.opacity = "0";
+          document.body.appendChild(t);
+          t.select();
+          try { document.execCommand("copy"); done(); } catch (e) {}
+          document.body.removeChild(t);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
